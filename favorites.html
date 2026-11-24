@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="View and remove your saved jobs and programming resources.">
+    <title>Saved items | Malawi Jobs and Skills Finder</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./src/favorites.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html">Malawi Jobs <span>&amp; Skills</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="sr-only">Toggle menu</span><span aria-hidden="true">Menu</span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./jobs.html">Remote jobs</a>
+        <a class="nav-link" href="./skills.html">Programming resources</a>
+        <a class="nav-link" href="./favorites.html" aria-current="page">Saved items</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Your collection</p>
+        <h1 id="page-title">Saved opportunities and resources</h1>
+        <p class="intro-copy">Saved items remain in this browser so you can return to them later.</p>
+      </section>
+
+      <section class="results-section">
+        <div class="results-heading">
+          <div><p class="eyebrow">Personal favourites</p><h2>Saved items</h2></div>
+          <button id="clear-favorites" class="remove-button" type="button">Clear all</button>
+        </div>
+        <p id="favorites-status" class="status" role="status" aria-live="polite"></p>
+        <div id="favorites-results" class="results-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Your favourites are stored locally in this browser.</p></footer>
+  </body>
+</html>

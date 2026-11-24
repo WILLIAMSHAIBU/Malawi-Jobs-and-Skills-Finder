@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover remote jobs and programming learning resources in Malawi.">
+    <title>Malawi Jobs and Skills Finder</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Malawi Jobs and Skills Finder home">
+        Malawi Jobs <span>&amp; Skills</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="sr-only">Toggle menu</span>
+        <span aria-hidden="true">Menu</span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="./index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="./jobs.html">Remote jobs</a>
+        <a class="nav-link" href="./skills.html">Programming resources</a>
+        <a class="nav-link" href="./favorites.html">Saved items</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Opportunities for Malawi's next generation</p>
+          <h1 id="hero-title">Find remote work. Build valuable skills.</h1>
+          <p class="hero-copy">
+            Search remote opportunities and explore open-source projects that can
+            help you learn, practise, and grow.
+          </p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="./jobs.html">Explore remote jobs</a>
+            <a class="button button--secondary" href="./skills.html">Browse resources</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Application highlights">
+          <div><strong>Remote</strong><span>work opportunities</span></div>
+          <div><strong>Open</strong><span>source projects</span></div>
+          <div><strong>Saved</strong><span>jobs and resources</span></div>
+        </div>
+      </section>
+
+      <section class="home-section" aria-labelledby="featured-jobs-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Start your search</p>
+            <h2 id="featured-jobs-heading">Featured remote jobs</h2>
+          </div>
+          <a class="text-link" href="./jobs.html">View all jobs <span aria-hidden="true">→</span></a>
+        </div>
+        <p id="featured-jobs-status" class="status" role="status" aria-live="polite">Loading featured jobs…</p>
+        <div id="featured-jobs" class="results-grid" aria-busy="true"></div>
+      </section>
+
+      <section class="home-section" aria-labelledby="featured-repositories-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Keep learning</p>
+            <h2 id="featured-repositories-heading">Popular programming projects</h2>
+          </div>
+          <a class="text-link" href="./skills.html">Explore resources <span aria-hidden="true">→</span></a>
+        </div>
+        <p id="featured-repositories-status" class="status" role="status" aria-live="polite">Loading repositories…</p>
+        <div id="featured-repositories" class="results-grid" aria-busy="true"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Malawi Jobs and Skills Finder · Jobs by Remotive · Resources by GitHub</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Search and filter remote job opportunities.">
+    <title>Remote jobs | Malawi Jobs and Skills Finder</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./src/jobs.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html">Malawi Jobs <span>&amp; Skills</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="sr-only">Toggle menu</span><span aria-hidden="true">Menu</span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./jobs.html" aria-current="page">Remote jobs</a>
+        <a class="nav-link" href="./skills.html">Programming resources</a>
+        <a class="nav-link" href="./favorites.html">Saved items</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Remote opportunities</p>
+        <h1 id="page-title">Find work that fits your future</h1>
+        <p class="intro-copy">Search remote jobs by title or keyword and narrow the results by category.</p>
+      </section>
+
+      <section class="search-panel" aria-label="Search remote jobs">
+        <form id="job-search-form" class="search-form">
+          <div class="field field--query">
+            <label for="job-query">Job title or keyword</label>
+            <input id="job-query" name="query" type="search" placeholder="Try: JavaScript developer">
+          </div>
+          <div class="field">
+            <label for="job-category">Category</label>
+            <select id="job-category" name="category">
+              <option value="">All categories</option>
+              <option value="software-dev">Software Development</option>
+              <option value="customer-support">Customer Support</option>
+              <option value="design">Design</option>
+              <option value="marketing">Marketing</option>
+              <option value="data">Data</option>
+            </select>
+          </div>
+          <button id="job-search-button" class="search-button" type="submit">Search jobs</button>
+        </form>
+      </section>
+
+      <section class="results-section" aria-labelledby="job-results-heading">
+        <div class="results-heading">
+          <div><p class="eyebrow">Available opportunities</p><h2 id="job-results-heading">Remote jobs</h2></div>
+          <p id="job-result-count" class="result-count"></p>
+        </div>
+        <p id="job-status" class="status" role="status" aria-live="polite">Loading remote jobs…</p>
+        <div id="job-results" class="results-grid" aria-busy="true"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Job listings provided by the Remotive API.</p></footer>
+  </body>
+</html>

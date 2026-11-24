@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Discover open-source programming projects and repositories to learn from."
+    >
+    <title>Explore programming resources | Malawi Jobs and Skills Finder</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./src/skills.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html">Malawi Jobs <span>&amp; Skills</span></a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="sr-only">Toggle menu</span>
+        <span aria-hidden="true">Menu</span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="./index.html">Home</a>
+        <a class="nav-link" href="./jobs.html">Remote jobs</a>
+        <a class="nav-link" href="./skills.html" aria-current="page">Programming resources</a>
+        <a class="nav-link" href="./favorites.html">Saved items</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Learn by exploring</p>
+        <h1 id="page-title">Find your next programming project</h1>
+        <p class="intro-copy">
+          Search GitHub repositories, compare popular projects, and follow a link
+          to explore the source code.
+        </p>
+      </section>
+
+      <section class="search-panel" aria-label="Search programming resources">
+        <form id="search-form" class="search-form">
+          <div class="field field--query">
+            <label for="query">Keyword or project topic</label>
+            <input
+              id="query"
+              name="query"
+              type="search"
+              placeholder="Try: web portfolio, data science"
+              required
+              maxlength="100"
+            >
+          </div>
+          <div class="field">
+            <label for="language">Programming language</label>
+            <select id="language" name="language">
+              <option value="">Any language</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="TypeScript">TypeScript</option>
+              <option value="Python">Python</option>
+              <option value="PHP">PHP</option>
+              <option value="Java">Java</option>
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+            </select>
+          </div>
+          <button id="search-button" class="search-button" type="submit">Search repositories</button>
+        </form>
+      </section>
+
+      <section class="results-section" aria-labelledby="results-heading">
+        <div class="results-heading">
+          <div>
+            <p class="eyebrow">Open-source learning</p>
+            <h2 id="results-heading">Programming resources</h2>
+          </div>
+          <p id="result-count" class="result-count"></p>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite">
+          Search by keyword to discover repositories.
+        </p>
+        <div id="results" class="results-grid" aria-busy="false"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Repository information provided by the GitHub API.</p>
+    </footer>
+  </body>
+</html>
