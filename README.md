@@ -20,13 +20,29 @@ providers.
 
 ## Run locally
 
-Use a local web server because the application uses ES modules:
+Install Node.js 20.19 or newer, then install the project dependencies:
 
 ```sh
-python3 -m http.server 8000
+npm install
 ```
 
-Open <http://localhost:8000/index.html>.
+Start the Vite development server:
+
+```sh
+npm run dev
+```
+
+Vite prints the local URL when the server starts.
+
+Create and preview a production build:
+
+```sh
+npm run build
+npm run preview
+```
+
+The production files are written to `dist/`. All four HTML pages are included
+in the build.
 
 ## Project structure
 
