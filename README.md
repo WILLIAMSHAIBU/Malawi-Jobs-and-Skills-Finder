@@ -46,11 +46,13 @@ in the build.
 
 ## Project structure
 
-- `src/main.js` starts the home page
-- `src/jobs.js` manages remote-job search
-- `src/skills.js` manages repository search
-- `src/favorites.js` renders saved items
-- `src/remotive.js` and `src/github.js` communicate with the APIs
-- `src/storage.js` manages browser favourites
-- `src/display.js` creates consistent resource cards
-- `src/navigation.js` manages responsive navigation
+- `css/styles.css` contains the application styles
+- `js/main.js` starts the home page
+- `js/jobs.js` manages remote-job search
+- `js/skills.js` manages repository search
+- `js/favorites.js` renders saved items
+- `js/remotive.js` and `js/github.js` communicate with the APIs
+- `js/storage.js` manages browser favourites
+- `js/display.js` creates consistent resource cards
+- `js/navigation.js` manages responsive navigation
+- `images/` is for image assets
